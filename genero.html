@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <h1>Cadastro</h1>
+    <p>Complete suas informações!</p>
+
+    <form id= "formulario">
+        <input id="nome" type="text" placeholder="Nome" required>
+        <input id="idade" type="text" placeholder="Sobrenome" required>
+        <label id= "genero" >Qual seu gênero?</label>
+            <select id= "genero">
+                <option value="">--Faça sua escolha--</option>
+                <option value="feminino">Feminino</option>
+                <option value="masculino">Masculino</option>
+            </select>
+
+        <button>Avançar</button>
+        
+    </form>
+
+    <div id="result"></div>
+
+    <script>  
+
+        function setGender(){
+            event.preventDefault()
+
+            
+            if (genero.value=== 'female') {
+                result.innerHTML = `<p style="color:pink"> "Seja Bem-Vinda!"</p>`
+            } else if (genero.value=== 'male') {
+                result.innerHTML =`<p style="color:blue"> "Seja Bem-Vindo!"</p>`
+            } else {
+                result.innerHTML = ``}
+        }
+        formulario.addEventListenner('submit', main)
+    </script>
+</body>
+</html>

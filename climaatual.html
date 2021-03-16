@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <h1>Exercício 1</h1>
+    <p>Informe o clima atual!.</p>
+<form id="formulario">
+    <label id= "season" >Em que estação do ano nós estamos?</label>
+    <select id= "season">
+        <option value="">--ESTAÇÕES--</option>
+        <option value="Verão">Verão</option>
+        <option value="Primavera">Primavera</option>
+        <option value="Outono">Outono</option>
+        <option value="Inverno">Inverno</option>
+    </select>
+    <button id="botao">Enviar</button>
+</form>
+<div id="resultado"></div>
+
+<script>
+    function main(event){
+        event.preventDefault()
+        if (season.value === 'Verão'){
+            result.innerHTML = `<p> Aproveite o dia, e não esqueça de se proteger do sol!</p>`}
+        else if (season.value === 'Primavera'){
+            result.innerHTML = `<p> Aprecie os jardins!</p>`}
+        else if (season.value === 'Outono'){
+            result.innerHTML = `<p> Quantas folhas no chão não é mesmo?!</p>`}
+        else if (season.value === 'Inverno'){
+            result.innerHTML = `<p> Se agasalhe bem!</p>`}
+        else {result.innerHTML = ''}
+    }
+formulario.addEventListener('submit', main)
+</script>
+</body>
+</html>
